@@ -15,8 +15,8 @@
 			position: absolute;
 			width: 70px;
 			height: 70px;
-			top: 500px;
-			left: 100px;
+			top: 100px;
+			left: 0px;
 			background-color: teal;
 			font-size: 300%;
 			text-align: center;
@@ -45,18 +45,33 @@
 			boardWidth = $('.board').width();
 
 			// TODO 2
+			var position = 0;
+			var points = 0;
+			var speed = 10;
+			var direction = 1;
+			box.css('left', position);      
+			box.text(points);              
 
-			
 			function update() {
 				// TODO 3 / 6 / 7 / 8
-				
+			position = position + (speed * direction);
+			if(position > boardWidth) {
+    			direction = -1;
+			}
+			if(position < 0) {
+				direction = 1;
+			}
+			box.css('left', position);
+			box.text(points);
 			};
 
 
 			
 			function handleBoxClick() {
 				// TODO 4 / 5
-				
+				speed = speed + 3;
+				position = 0;
+				points = points + 1;
 			};
 
 
