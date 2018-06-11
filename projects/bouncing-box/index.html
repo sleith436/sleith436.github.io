@@ -11,16 +11,22 @@
 	<style>
 		/* TODO 1 */
 		[class="box"] {
+			background-size: 100px;
 			display: block;
 			position: absolute;
-			width: 70px;
-			height: 70px;
-			top: 100px;
+			width: 100px;
+			height: 100px;
+			top: 200px;
 			left: 0px;
-			background-color: teal;
+			background-image: url("https://cdn2.iconfinder.com/data/icons/tiny-space/64/tiny_space-04-512.png");
 			font-size: 300%;
+			color: white;
 			text-align: center;
 		}
+		.board{
+			background-image: url("https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-21.jpg");
+		}
+		
 	</style>
 
 </head>
@@ -39,6 +45,7 @@
 			var boardWidth;
 			var update;
 			var handleBoxClick;
+			
 
 			// jQuery stuff setup for you
 			box = $('.box');
@@ -47,8 +54,9 @@
 			// TODO 2
 			var position = 0;
 			var points = 0;
-			var speed = 10;
+			var speed = 8;
 			var direction = 1;
+			
 			box.css('left', position);      
 			box.text(points);              
 
@@ -64,7 +72,7 @@
 			box.css('left', position);
 			box.text(points);
 			};
-
+			
 
 			
 			function handleBoxClick() {
@@ -74,7 +82,7 @@
 				points = points + 1;
 			};
 
-
+			
 			//this calls update every 50 milliseconds
 			setInterval(update, 50);
 			// this calls the handle handleBoxClick function every time the box is clicked on
