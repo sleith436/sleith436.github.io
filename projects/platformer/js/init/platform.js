@@ -38,8 +38,8 @@
         platform.create(0, 550, 0.8, 0.5);
         platform.create(420, 460, 0.8, 0.5);
         platform.create(750, 350, 0.4, 0.5);
-        platform.create(520, 230, 0.8, 0.4);
-        platform.create(320, 100, 0.5, 0.5 );
+        platform.create(500, 230, 0.8, 0.4);
+        platform.create(120, 150, 1.2, 0.4 );
        
         
         
