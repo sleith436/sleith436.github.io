@@ -67,15 +67,21 @@
             }
             .interests header {
                 flex: 1;
-                padding: 15px;
+                padding: 25px;
                 font-size: 1.50em;
+            }
+            button {
+                background-color: #fff;
+                border-radius: 10px;
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
            $(document).ready(function(){
-               $("button").mouseenter(function(){
-                   alert("rip vine");
+               $(".favorite-vines").hide();
+               $("button").click(function(){
+                   $(this).css("background-color", "#cccccc");
+                   $(".favorite-vines").slideToggle();
                });
            });
         </script>
@@ -111,10 +117,11 @@
                    <header>Favorite Vines</header>
                    <section class="interests">
                        <button>Use me to see my favorite vines</button>
-                       <ul class="Favorite Vines">
-                           <li>uh yea i sure hope it does</li>
-                           <li>i dont need a degree to be no clothing hanger</li>
-                           <li>anything for you beyonce</li>
+                       <ul class="favorite-vines">
+                           <li><a href="https://www.youtube.com/watch?v=4f60YU__PPs">Zack Stop</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=Tg1KpGM9_gI">I dont need no degree to be a clothing hanger</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=KY_nkn5ShfM">Anything for you Beyonce</a></li>
+                           <li><a href="https://www.youtube.com/watch?v=CIZePAoYE9w">What. Stop.</a></li>
                        </ul>
                    </section>
                    
